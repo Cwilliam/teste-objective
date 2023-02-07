@@ -1,4 +1,4 @@
-##Seguir os seguintes passos para rodar o projeto:
+### Seguir os seguintes passos para rodar o projeto:
 
 `nvm use 16`
 
