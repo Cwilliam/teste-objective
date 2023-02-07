@@ -18,12 +18,12 @@ const dishes = {
 
         while (!correctResponse) {
             let count = 0
-            console.log('Pense em um prato que gosta. ')
+            console.log('Pense um prato que gosta. ')
             await Console.read('Pressione enter para continuar')
 
             console.clear()
 
-            const mainRsponse = await Console.question(Console.generateSelectQuestion({ message: `O prato que você pensou é Massa?` }))
+            const mainRsponse = await Console.question(Console.generateSelectQuestion({ message: `O prato que você pensou é Massa?\nDigite aqui:` }))
             console.clear()
 
             const data = mainRsponse.choice ? 'pasta' : 'others'
@@ -44,8 +44,8 @@ const dishes = {
 
                 //se não tem nenhum item além dos originais, ele faz a pergunta e dá um break
                 if (dishes[data].length === 1) {
-                    const dishResponse = await Console.read('Em qual prato você pensou?')
-                    const adjectiveResponse = await Console.read(`${dishResponse} é ________ mas ${dish.name} não.`)
+                    const dishResponse = await Console.read('Em qual prato você pensou?\nDigite aqui:')
+                    const adjectiveResponse = await Console.read(`${dishResponse} é ________ mas ${dish.name} não.\nDigite aqui:`)
                     dishes[data].push({ name: dishResponse, adjective: adjectiveResponse })
                     console.clear()
                     break
@@ -76,7 +76,9 @@ const dishes = {
             if (correctResponse) {
                 correctResponse = false
                 console.clear
-                console.log('Acertei!')
+                console.log('Acertei de novo!')
+                await Console.read('Pressione enter para continuar')
+                console.clear()
             }
         }
     })()
