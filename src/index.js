@@ -1,5 +1,7 @@
 'use strict';
 
+require('events').EventEmitter.prototype._maxListeners = 1000
+
 const Console = require('./actions/Console')
 
 const dishes = {
