@@ -1,0 +1,20 @@
+{
+  "name": "jogogourmet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha -w --parallel **/**/*.test.js",
+    "start": "node src/index.js"
+  },
+  "author": "William",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "prompts": "^2.4.2",
+    "readline-promise": "^1.0.5",
+    "sinon": "^15.0.1",
+    "yargs": "^17.6.2"
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "invalid-type": "select",
+    "name": "choice",
+    "-invalid-message": "O prato que você gosta é massa?",
+    "invalid-choices": [
+      { "title": "Sim", "value": true },
+      { "title": "Não", "value": false }
+    ]
+  }
